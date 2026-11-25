@@ -1,7 +1,5 @@
-import * as fs from "node:fs";
+// Worst app pitch: a fridge-sniffing subscription nobody needs, sold with total founder confidence.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = "Blinkr: an app that tracks how often you blink, then sends a push notification every time you forget to blink, because your eyelids deserve analytics too.";
-
-fs.mkdirSync("/output", {recursive: true});
-fs.writeFileSync("/output/entry.txt", entry, "utf8");
-console.log("wrote /output/entry.txt (" + entry.length + " chars)");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", "Sniffr: a $9.99/month app that sniffs your fridge through your phone's microphone and texts you 'something smells off' with zero further detail, for people who already own a nose.");
